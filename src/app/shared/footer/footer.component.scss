@@ -1,0 +1,111 @@
+@mixin underline {
+    background-color: white;
+    border-radius: 20px;
+    width: 60px;
+    height: 5px;
+}
+
+h2 {
+    color: white !important;
+    border: 2px white 200px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.underline-style {
+    @include underline();
+}
+
+p {
+    font-size: 10px;
+}
+
+ul {
+    margin-left: 0px;
+
+    li {
+        list-style-type: none;
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    li:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
+
+
+.container {
+    background-color: #086375;
+    color: white;
+    font-family: "Roboto", sans-serif;
+
+    .column {
+        display: flex;
+        justify-content: center;
+        margin-left: 20px;
+    }
+
+    .infos {
+        padding: 50px 20px;
+
+        .logo {
+            color: #f0fcff;
+            font-size: 20px;
+
+            .ebook {
+                letter-spacing: 3px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .tmp {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-column {
+        text-align: center;
+
+        .social {
+
+            margin-top: 30px;
+
+            i {
+                color: #033b46;
+                border-radius: 50%;
+                background-color: white;
+                padding: 10px;
+                margin-right: 15px;
+                font-size: 20px;
+                transition: all ease .2s;
+
+            }
+
+            i:hover {
+                transform: scale(120%);
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+    .coopiright {
+        background-color: #0d7388;
+        text-align: center;
+        padding: 10px 0px;
+        font-size: 12px;
+
+        .didi {
+            color: chartreuse;
+        }
+
+        .didi:hover {
+            cursor: pointer;
+        }
+    }
+}

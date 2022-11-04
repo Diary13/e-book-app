@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import 'aos';
+
+declare const AOS: any;
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'e-book-app';
+  constructor() {
+    AOS.init();
+  }
 }

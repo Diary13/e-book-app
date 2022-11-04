@@ -1,0 +1,54 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item logo">
+            <i class="fa-solid fa-book"></i><span class="ebook">&nbsp;&nbsp;E-book</span>
+        </a>
+        <a role="button" class="navbar-burger" (click)="active = !active" [ngClass]="{'is-active': active}"
+            aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu" (click)="active = !active" [ngClass]="{'is-active': active}">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                Accueil
+            </a>
+            <a class="navbar-item">
+                Réservation
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Divers
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Activités
+                    </a>
+                    <a class="navbar-item">
+                        Gallerie
+                    </a>
+                    <a class="navbar-item">
+                        Evènements
+                    </a>
+                </div>
+            </div>
+            <a class="navbar-item">
+                Contact
+            </a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary">
+                        <strong>S'inscrire</strong>
+                    </a>
+                    <a class="button is-light">
+                        Se connecter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

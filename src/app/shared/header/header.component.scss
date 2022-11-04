@@ -1,0 +1,23 @@
+//pallete #3c1642,#086375,#1dd3b0,#affc41,#b2ff9e 
+
+.logo {
+    color: #086375;
+    font-family: "Roboto", sans-serif;
+
+    .ebook {
+        letter-spacing: 3px;
+        font-size: 1.5rem;
+    }
+
+    .fa-book {
+        font-size: 1.5rem;
+    }
+}
+
+.is-primary {
+    background-color: #086375;
+
+    &:hover {
+        background-color: #043842;
+    }
+}

@@ -1,0 +1,38 @@
+<div class="container is-fullhd content is-normal columns">
+    <div class="infos column is-two-fifths relative">
+        <div class="inf" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <h1 class="title">E-Book Plateforme</h1>
+            <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Op
+                tio voluptatem neque est ex quae omnis? Totam incidunt illoipsam minima officiis.
+                Quo exercitationem dolorum voluptatu Lorem ipsum dolor sit, a met consectetur adi
+                pisicing elit. Op Lorem ipsum dolor sit, amet consectetur ad ipisicing elit. Op Lo
+                rem ipsum dolor sit, amet consectetur adipisicing elit. Opm porro? Numquam cum ea
+                impedit?</p><br>
+            <button class="button">Plus d'info</button>
+
+        </div>
+        <div class="social-responsive">
+            <i class="fab fa-facebook"></i>
+            <i class="fa fa-envelope"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <svg class="is-mobile">
+            <path d="M500 0 C500 0, 300 40, 180 200 C180 200, 140 280, 95 400 C95 400, 75 450, 0 530 V0 0 z "
+                stroke="transparent" fill="#086375" />
+        </svg>
+    </div>
+    <div class="image column" [ngClass]="{change:show}">
+        <div [hidden]="counter !== 0">
+            <img src="../../../assets/images/library-books.jpg" alt="F4">
+        </div>
+        <div [hidden]="counter !== 1">
+            <img src="../../../assets/images/read-book.jpg" alt="F4">
+        </div>
+        <div class="social">
+            <i class="fab fa-facebook"></i>
+            <i class="fa fa-envelope"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </div>
+
+</div>
