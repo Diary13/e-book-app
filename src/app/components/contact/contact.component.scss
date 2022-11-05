@@ -1,0 +1,60 @@
+@import "src/styles.scss";
+
+.icon-contact {
+    font-size: 20px;
+    color: white;
+    background-color: $primary;
+    padding: 20px;
+    border-radius: 50%;
+    transition: all ease .5s;
+
+    &:hover {
+        background-color: $primary_hover;
+        transform: scale(110%);
+    }
+}
+
+textarea {
+    border-radius: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact {
+    text-align: center;
+    font-family: $font;
+    margin-bottom: 50px;
+
+    h1 {
+        color: $primary;
+    }
+
+    .underline-style {
+        width: 250px;
+        height: 5px;
+        border-radius: 15px;
+        background-color: $primary;
+        margin: 10px 0px;
+    }
+}
+
+.submit {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: $primary;
+    transition: all ease .2s;
+
+    &:hover {
+        background-color: $primary_hover;
+    }
+}

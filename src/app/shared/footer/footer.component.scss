@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 @mixin underline {
     background-color: white;
     border-radius: 20px;
@@ -35,10 +37,8 @@ ul {
     }
 }
 
-
-
 .container {
-    background-color: #086375;
+    background-color: $primary;
     color: white;
     font-family: "Roboto", sans-serif;
 

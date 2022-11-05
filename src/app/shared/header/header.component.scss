@@ -1,8 +1,9 @@
 //pallete #3c1642,#086375,#1dd3b0,#affc41,#b2ff9e 
+@import 'src/styles.scss';
 
 .logo {
-    color: #086375;
-    font-family: "Roboto", sans-serif;
+    color: $primary;
+    font-family: $font;
 
     .ebook {
         letter-spacing: 3px;
@@ -15,9 +16,9 @@
 }
 
 .is-primary {
-    background-color: #086375;
+    background-color: $primary;
 
     &:hover {
-        background-color: #043842;
+        background-color: $primary_hover;
     }
 }
