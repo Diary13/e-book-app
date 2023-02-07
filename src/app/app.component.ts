@@ -13,4 +13,5 @@ export class AppComponent {
   constructor() {
     AOS.init();
   }
+
 }

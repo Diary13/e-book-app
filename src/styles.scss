@@ -2,3 +2,13 @@
 $primary: #086375;
 $primary_hover: #043842;
 $font: "Roboto", sans-serif;
+
+@mixin transform($value) {
+    -webkit-transform: $value;
+    transform: $value;
+}
+
+@mixin trans-duration($time) {
+    -webkit-transition-duration: $time;
+    transition-duration: $time;
+}

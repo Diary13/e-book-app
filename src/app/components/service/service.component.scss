@@ -1,0 +1,54 @@
+@import "src/styles.scss";
+
+
+.service {
+    text-align: center;
+    font-family: $font;
+    margin: 0px 150px 50px 150px;
+
+    h1 {
+        color: $primary;
+    }
+
+    .underline-style {
+        width: 250px;
+        height: 5px;
+        border-radius: 15px;
+        background-color: $primary;
+        margin: 10px 0px;
+    }
+
+
+}
+
+.icon-service {
+    color: $primary;
+    // text-align: center;
+    font-size: 50px;
+    height: 90px;
+    width: 90px;
+    border: 1px $primary solid;
+    padding: 20px;
+    border-radius: 50%;
+    transition: all ease .2s;
+}
+
+
+.service-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .serv-icon {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.detail-service {
+    margin-left: 20px;
+
+    p {
+        font-size: 14px;
+    }
+}

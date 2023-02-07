@@ -1,0 +1,89 @@
+<div class="main-container" [ngClass]="{'sign-up-mode': active}">
+    <div class="forms-main-container">
+        <div class="signin-signup">
+            <form [formGroup]="loginForm" class="sign-in-form" (submit)="login()">
+                <h2 class="title">E - Book</h2>
+                <div class="input-field">
+                    <p class="control has-icons-left">
+                        <input class="input is-rounded" formControlName="username" type="text" placeholder="Nom">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="input-field">
+                    <p class="control has-icons-left">
+                        <input class="input is-rounded" formControlName="password" type="password"
+                            placeholder="Mot de passe">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </p>
+                </div>
+                <input type="submit" value="Connexion" class="btn connexion solid">
+                <p class="forgot-pwd">Mot de passe oublié ?</p>
+            </form>
+            <form [formGroup]="subscriberForm" (submit)="register()" class="sign-up-form">
+                <h2 class="title">S'inscrire</h2>
+                <div class="input-field">
+                    <p class="control has-icons-left">
+                        <input class="input is-rounded" formControlName="username" type="text"
+                            placeholder="Nom d'utilisateur">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="input-field">
+                    <p class="control has-icons-left">
+                        <input class="input is-rounded" formControlName="email" type="email" placeholder="Email">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="input-field">
+                    <p class="control has-icons-left">
+                        <input class="input is-rounded" formControlName="password" type="password"
+                            placeholder="Mot de passe">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="input-field">
+                    <p class="control has-icons-left">
+                        <input class="input is-rounded" formControlName="tel" type="tel" placeholder="Téléphone">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-phone"></i>
+                        </span>
+                    </p>
+                </div>
+                <input type="submit" value="Valider" class="btn connexion solid">
+            </form>
+        </div>
+    </div>
+    <div class="panels-main-container">
+        <div class="panel left-panel">
+            <div class="content is-normal">
+                <h3>Nouveau ici?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, ad
+                    ipisicing elit. Laborum voluptatum quas quaerat recusandae,fdlkgjslmkf molestias ab dis.</p>
+                <button class="btn transparent btn-sign" id="sign-up-btn" (click)="active = !active"
+                    routerLink="/sign-up/true">S'inscrire</button>
+            </div>
+            <img src="../../../assets/img/line-proud.svg" class="image" alt="">
+        </div>
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>Déjà inscrit?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, ad
+                    ipisicing elit. Laborum voluptatum quas quaerat recusandae, fdlkgjslmkf molestias ab dis.</p>
+                <button class="btn transparent btn-sign" id="sign-in-btn" (click)="active = !active"
+                    routerLink="/sign-up/false">Se
+                    connecter</button>
+            </div>
+            <img src="../../../assets/img/login.svg" class="image" alt="">
+        </div>
+    </div>
+</div>
