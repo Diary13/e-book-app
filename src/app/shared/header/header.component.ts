@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   public active: boolean = false;
+  public connected: boolean = true;
   constructor() { }
 
   ngOnInit(): void {

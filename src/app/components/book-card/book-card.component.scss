@@ -160,8 +160,14 @@
      }
  }
 
+ .all_info_book {
+     p {
+         margin-bottom: 0px;
+     }
+ }
+
  .book_desc {
-     font-size: 15px;
+     font-size: 12px;
      font-weight: bold;
  }
 
@@ -170,5 +176,15 @@
  }
 
  .book_desc_value {
-     font-size: 15px;
+     font-size: 12px;
+ }
+
+ .modal-card-foot {
+     display: flex;
+     justify-content: flex-end;
+
+     .button {
+         background-color: $primary !important;
+         color: white;
+     }
  }

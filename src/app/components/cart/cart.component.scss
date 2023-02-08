@@ -1,0 +1,28 @@
+.container-fluid {
+    text-align: center;
+    background-color: rgba(238, 231, 231, 0.452);
+    padding: 15px 20px;
+
+    .cart_header {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+
+        .control {
+            width: 350px;
+        }
+    }
+
+    .cart_content {
+        margin-top: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.63);
+    }
+}

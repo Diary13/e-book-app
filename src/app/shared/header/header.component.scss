@@ -22,3 +22,54 @@
         background-color: $primary_hover;
     }
 }
+
+.navbar-end {
+    .navbar-item {
+        .button_cart {
+            border: none !important;
+            margin-right: 20px;
+            padding: 4px 5px;
+            background-color: transparent;
+
+            .fa-cart-plus {
+                font-size: 18px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &:active {
+                outline: none !important;
+                border-color: red !important;
+
+            }
+
+            .badge {
+                position: absolute;
+                top: 6px;
+                left: 30px;
+                font-size: 10px;
+                color: white;
+                font-weight: bold;
+                background-color: red;
+                padding: 0px 2px;
+                border-radius: 5px;
+            }
+        }
+
+        .user {
+            &:hover {
+                cursor: pointer;
+            }
+
+            img {
+                width: 30px;
+                height: 40px;
+                border-radius: 100%;
+                // border: 1px grey solid;
+                background-color: rgb(165, 159, 159);
+            }
+        }
+    }
+}

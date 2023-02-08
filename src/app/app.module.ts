@@ -15,6 +15,8 @@ import { JumbotronBooksComponent } from './components/jumbotron-books/jumbotron-
 import { SellBookComponent } from './pages/sell-book/sell-book.component';
 import { ToolbarFilterComponent } from './components/toolbar-filter/toolbar-filter.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
+import { CartComponent } from './components/cart/cart.component';
+import { BookCartViewComponent } from './components/book-cart-view/book-cart-view.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { BookCardComponent } from './components/book-card/book-card.component';
     SellBookComponent,
     ToolbarFilterComponent,
     BookCardComponent,
+    CartComponent,
+    BookCartViewComponent,
   ],
   imports: [
     BrowserModule,
