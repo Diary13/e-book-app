@@ -1,19 +1,54 @@
 <div class="container-fluid content is-normal">
-    <div class="cart_header">
-        <div class="control has-icons-left">
-            <input class="input is-rounded is-one-quarters" type="text" placeholder="Search">
-            <span class="icon is-left">
-                <i class="fas fa-search" aria-hidden="true"></i>
-            </span>
-        </div>
-    </div>
     <h1>Récapitulatif de mon panier</h1>
     <div class="columns cart_content">
-        <div class="column is-three-quarters">
-            <app-book-cart-view></app-book-cart-view>
-            <app-book-cart-view></app-book-cart-view>
-            <app-book-cart-view></app-book-cart-view>
+        <div class="column is-three-quarters cart">
+            <div class="cart_header">
+                <div class="control has-icons-left">
+                    <input class="input is-rounded is-one-quarters" type="text" placeholder="Search">
+                    <span class="icon is-left">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="list_product">
+                <app-book-cart-view></app-book-cart-view>
+                <app-book-cart-view></app-book-cart-view>
+                <app-book-cart-view></app-book-cart-view>
+                <app-book-cart-view></app-book-cart-view>
+            </div>
+
+            <div class="cart_footer">
+                <div></div>
+            </div>
         </div>
-        <div class="column"></div>
+        <div class="column cart_validation">
+            <div class="zone_total_price">
+                <div class="total_price">
+                    <span>Produit:</span>
+                    <span>300 000 Ar</span>
+                </div>
+                <div class="total_price">
+                    <span>Livraison:</span><span class="price_value">30 000 Ar</span>
+                </div>
+                <hr>
+                <div class="total_price">
+                    <span class="total">Total:</span><span class="total_price_value">330 000 Ar</span>
+                </div>
+                <button class="button">Valider la commande</button>
+            </div>
+            <div class="zone_info">
+                <div class="info_command">
+                    <span><i class="fa-solid fa-calendar-day"></i></span>
+                    <span>&nbsp;Expédié en 24h maximum</span>
+                </div>
+                <div class="info_command">
+                    <span><i class="fa fa-cart-flatbed"></i></span>
+                    <span>Livraison bien sécurisé</span>
+                </div>
+                <div class="info_command"><span><i class="fa-solid fa-lock"></i></span>
+                    <span>&nbsp;Payement ultra sécurisé</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
