@@ -18,11 +18,21 @@
             .cart_header {
                 width: 100%;
                 margin: 0;
-                display: flex;
-                justify-content: flex-start;
-                // background-color: rgba(202, 196, 196, 0.658);
                 padding: 10px 20px;
                 border-radius: 5px 5px 0px 0px;
+
+                .delete_all_column {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .button {
+                        background-color: $primary !important;
+                        color: white;
+                        border: none;
+                    }
+                }
+
+
 
                 .control {
                     width: 350px;
@@ -62,6 +72,7 @@
             .button {
                 margin-top: 20px;
                 background-color: $primary;
+                border: none;
                 color: white;
             }
 

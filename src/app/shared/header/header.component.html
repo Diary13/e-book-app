@@ -41,11 +41,30 @@
                     <i class="fa fa-cart-plus"></i>
                     <span class="badge is-warning">+12</span>
                 </button>
-                <div class="user is-flex" routerLink="/">
-                    <img src="../../../assets/images/users/admin.png" alt="">
-                    <span>&nbsp;&nbsp;Utilisateur</span>
+                <div class="dropdown is-hoverable user is-flex">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <img src="../../../assets/images/users/admin.png" alt="">
+                            <span>&nbsp;&nbsp;Utilisateur</span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">
+                                <i class="fa fa-pen"></i>&nbsp;&nbsp; Edit profil
+                            </a>
+                            <a href="#" class="dropdown-item" (click)="quit()">
+                                <i class="fa fa-sign-out"></i>&nbsp;&nbsp; Sign out
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </nav>
+
+<app-popup-confirm [show]="showModal" (showEvent)="receiveShowValue($event)" [modalType]="'logout'"
+    [question]="question">
+</app-popup-confirm>

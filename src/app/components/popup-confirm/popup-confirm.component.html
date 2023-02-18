@@ -1,0 +1,14 @@
+<div class="modal" [ngClass]="{'is-active': show}">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="modal_header">
+            <button class="delete" aria-label="close" (click)="sendShowValue()"></button>
+        </div>
+        <div class="question">{{question}}
+        </div>
+        <div class="content_footer">
+            <button class="button is-success" (click)="confirm()">Confirmer</button>
+            <button class="button" (click)="sendShowValue()">Annuler</button>
+        </div>
+    </div>
+</div>
