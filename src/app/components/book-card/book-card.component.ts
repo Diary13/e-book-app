@@ -10,10 +10,12 @@ export class BookCardComponent implements OnInit {
   @Input() title: string = '';
   @Input() path: string = '';
   show = false;
+  connected = '';
 
   constructor() { }
 
   ngOnInit(): void {
+    this.connected = sessionStorage.getItem('token') || '';
   }
 
   toggleModal() {

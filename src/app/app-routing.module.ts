@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './components/cart/cart.component';
 import { FormsComponent } from './components/forms/forms.component';
+import { AuthGuard } from './components/guards/auth.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { SellBookComponent } from './pages/sell-book/sell-book.component';
 
@@ -9,7 +10,7 @@ const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "sell", component: SellBookComponent },
   { path: "sign-up/:active", component: FormsComponent },
-  { path: "cart", component: CartComponent },
+  { path: "cart", component: CartComponent, canActivate: [AuthGuard] },
   { path: "**", redirectTo: "" },
 ];
 

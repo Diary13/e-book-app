@@ -60,7 +60,11 @@
 
         </section>
         <footer class="modal-card-foot">
-            <button class="button "><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to cart</button>
+            <button class="button is-disabled" *ngIf="!connected"><i
+                    class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Sign
+                up</button>
+            <button class="button is-disabled" *ngIf="connected"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to
+                cart</button>
         </footer>
     </div>
 </div>

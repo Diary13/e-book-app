@@ -27,8 +27,7 @@ export class PopupConfirmComponent implements OnInit {
   confirm() {
     if (this.modalType == 'logout') {
       sessionStorage.removeItem('token');
+      location.assign('/');
     }
-    location.reload();
   }
-
 }
