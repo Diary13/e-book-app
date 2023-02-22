@@ -1,35 +1,10 @@
 <app-jumbotron-books></app-jumbotron-books>
 <div class="all_content">
     <app-toolbar-filter></app-toolbar-filter>
-    <!-- <app-book-card class="column"></app-book-card> -->
     <h1 class="subtitle is-normal">Tous</h1>
-    <div class="content columns">
+    <div class="content columns is-multiline">
         <ng-container *ngFor="let tmp of books">
             <app-book-card [title]="tmp.title" [path]="tmp.path" class="column"></app-book-card>
         </ng-container>
-
-        <!-- <app-book-card class="column"></app-book-card>
-        <app-book-card class="column"></app-book-card>
-        <app-book-card class="column"></app-book-card>
-        <app-book-card class="column"></app-book-card>
-        <app-book-card class="column"></app-book-card> -->
-    </div>
-    <div class="content columns">
-        <ng-container *ngFor="let tmp of books">
-            <app-book-card [title]="tmp.title" [path]="tmp.path" class="column"></app-book-card>
-        </ng-container>
-        <!-- <app-book-card class="column"></app-book-card>
-        <app-book-card class="column"></app-book-card>
-        <app-book-card class="column"></app-book-card>
-        <app-book-card class="column"></app-book-card> -->
-    </div>
-    <div class="content columns">
-        <ng-container *ngFor="let tmp of books">
-            <app-book-card [title]="tmp.title" [path]="tmp.path" class="column"></app-book-card>
-        </ng-container>
-        <!-- <app-book-card class="column"></app-book-card>
-        <app-book-card class="column"></app-book-card>
-        <app-book-card class="column"></app-book-card>
-        <app-book-card class="column"></app-book-card> -->
     </div>
 </div>

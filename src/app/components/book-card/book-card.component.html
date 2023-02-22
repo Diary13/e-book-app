@@ -1,11 +1,15 @@
-<div class="card1">
+<div class="card1 container">
     <div class="book">
         <img class="book_img" src="{{path}}" alt="F4">
         <div class="info">
             <div class="btn_detail">
                 <button class="button" (click)="toggleModal()"><i
                         class="fa fa-info-circle"></i>&nbsp;&nbsp;Details</button>
-                <button class="button"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to cart</button>
+                <button class="button" *ngIf="!connected" disabled><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add
+                    to
+                    cart</button>
+                <button class="button" *ngIf="connected"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to
+                    cart</button>
             </div>
         </div>
         <div class="price">
@@ -60,7 +64,7 @@
 
         </section>
         <footer class="modal-card-foot">
-            <button class="button is-disabled" *ngIf="!connected"><i
+            <button class="button is-disabled" *ngIf="!connected" routerLink="/sign-up/true"><i
                     class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Sign
                 up</button>
             <button class="button is-disabled" *ngIf="connected"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;Add to

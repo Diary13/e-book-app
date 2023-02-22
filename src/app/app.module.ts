@@ -21,9 +21,9 @@ import { BookCartViewComponent } from './components/book-cart-view/book-cart-vie
 import { PopupConfirmComponent } from './components/popup-confirm/popup-confirm.component';
 import { AuthService } from './components/forms/auth.service';
 import { HttpClientModule } from '@angular/common/http';
-// import { APOLLO_OPTIONS } from 'apollo-angular';
-// import { InMemoryCache } from '@apollo/client';
-// import { HttpLink } from 'apollo-angular/http';
+import { APOLLO_OPTIONS } from 'apollo-angular';
+import { InMemoryCache } from '@apollo/client/core';
+import { HttpLink } from 'apollo-angular/http';
 
 @NgModule({
   declarations: [
@@ -51,20 +51,19 @@ import { HttpClientModule } from '@angular/common/http';
     // MatSnackBarModule
   ],
   providers: [
-    AuthService
-
-    // {
-    //   provide: APOLLO_OPTIONS,
-    //   useFactory: (httpLink: HttpLink) => {
-    //     return {
-    //       cache: new InMemoryCache(),
-    //       link: httpLink.create({
-    //         uri: 'api/graphql',
-    //       }),
-    //     };
-    //   },
-    //   deps: [HttpLink],
-    // }
+    AuthService,
+    {
+      provide: APOLLO_OPTIONS,
+      useFactory: (httpLink: HttpLink) => {
+        return {
+          cache: new InMemoryCache(),
+          link: httpLink.create({
+            uri: 'api/graphql',
+          }),
+        };
+      },
+      deps: [HttpLink],
+    }
   ],
   bootstrap: [AppComponent]
 })
