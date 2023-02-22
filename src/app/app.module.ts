@@ -21,9 +21,11 @@ import { BookCartViewComponent } from './components/book-cart-view/book-cart-vie
 import { PopupConfirmComponent } from './components/popup-confirm/popup-confirm.component';
 import { AuthService } from './components/forms/auth.service';
 import { HttpClientModule } from '@angular/common/http';
-import { APOLLO_OPTIONS } from 'apollo-angular';
+import { ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
 import { InMemoryCache } from '@apollo/client/core';
 import { HttpLink } from 'apollo-angular/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { HttpLink } from 'apollo-angular/http';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    // MatSnackBarModule
+    ApolloModule,
+    MatSnackBarModule
   ],
   providers: [
     AuthService,

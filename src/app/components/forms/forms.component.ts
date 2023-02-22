@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserType } from 'src/generated-types';
 import { AuthService } from './auth.service';
@@ -26,7 +27,7 @@ export class FormsComponent implements OnInit {
     email: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
   })
-  constructor(private route: ActivatedRoute, private router: Router, private authService: AuthService) {
+  constructor(private route: ActivatedRoute, private router: Router, private snackbar: MatSnackBar, private authService: AuthService) {
     this.route.params.subscribe(param => {
       this.active = (param['active'] == 'true') ? true : false;
     });
@@ -41,13 +42,13 @@ export class FormsComponent implements OnInit {
       const controls = this.subscriberForm.controls;
       try {
         const userDto = {
-          id: '',
-          image: '',
+          id: ''!,
+          image: ''!,
           isAdmin: false,
-          email: controls['email'].value,
-          username: controls['username'].value,
-          password: controls['password'].value,
-          tel: controls['tel'].value
+          email: controls['email'].value!,
+          username: controls['username'].value!,
+          password: controls['password'].value!,
+          tel: controls['tel'].value!
         }
         this.authService.signUp(userDto).subscribe({
           next: (res: any) => {
@@ -56,11 +57,11 @@ export class FormsComponent implements OnInit {
               this.subscriberForm.controls['username'].setValue("");
               this.subscriberForm.controls['password'].setValue("");
               this.subscriberForm.controls['tel'].setValue("");
-              // this.snackbar.open("Inscription terminée avec succès!", '', {
-              //   duration: 3000,
-              //   // verticalPosition: 'top',
-              //   // horizontalPosition: 'center',
-              // });
+              this.snackbar.open("Inscription terminée avec succès!", '', {
+                duration: 3000,
+                // verticalPosition: 'top',
+                // horizontalPosition: 'center',
+              });
               // setTimeout(() => {
               //   location.reload();
               // }, 1000);
@@ -93,8 +94,8 @@ export class FormsComponent implements OnInit {
       if (this.loginForm.valid) {
         const controls = this.loginForm.controls;
         const data = {
-          email: controls['email'].value,
-          password: controls['password'].value
+          email: controls['email'].value!,
+          password: controls['password'].value!
         }
         this.authService.login(data).subscribe({
           next: (res: any) => {
@@ -102,7 +103,12 @@ export class FormsComponent implements OnInit {
             if (res.token) {
               sessionStorage.setItem('token', res.token);
               // this.router.navigate(['/sell']);
-              location.assign('/sell');
+              this.snackbar.open("Connecté", '', {
+                duration: 3000,
+                verticalPosition: 'top',
+                horizontalPosition: 'center',
+              });
+              // location.assign('/sell');
             } else {
               console.log(res.message);
             }
