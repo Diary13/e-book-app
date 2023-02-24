@@ -4,7 +4,12 @@
     <h1 class="subtitle is-normal">Tous</h1>
     <div class="content columns is-multiline">
         <ng-container *ngFor="let tmp of books">
-            <app-book-card [title]="tmp.title" [path]="tmp.path" class="column"></app-book-card>
+            <!-- <app-book-card [title]="tmp.title" [path]="'assets/images/1666680234811_3D-Arrow-PNG-Free-Download.png'"
+                class="column"> -->
+            <app-book-card [title]="tmp.title" [path]="url + '/' + tmp.image" [price]="tmp.price"
+                [description]="tmp.description" [author]="tmp.author" [quantity]="tmp.quantity" [edit]="tmp.edit"
+                [genre]="tmp.genre" class="column">
+            </app-book-card>
         </ng-container>
     </div>
 </div>

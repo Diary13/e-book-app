@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="price">
-            <h1 class="price_value">Ar 100 000</h1>
+            <h1 class="price_value">Ar {{price}}</h1>
             <img class="price_img" src="../../../assets/images/price1.png" alt="F4">
         </div>
     </div>
@@ -38,30 +38,28 @@
                 <div class="column book_modal">
                     <img class="book_img_modal" src="{{path}}" alt="F4">
                     <div class="price_modal">
-                        <h1 class="price_value_modal">Ar 100 000</h1>
+                        <h1 class="price_value_modal">Ar {{price}}</h1>
                         <img class="price_img_modal" src="../../../assets/images/price1.png" alt="F4">
                     </div>
                 </div>
                 <div class="column">
-                    <h1>Book title</h1>
+                    <h1>{{title}}</h1>
                     <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                             class="fa fa-star"></i><i class="fa fa-star"></i></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-                        eveniet cupiditate excepturi cum obcaecati explicabo alias! Delectus incidunt cumque perferendis
-                        et repudiandae! Ad par
-                        iatur inventore saepe maxime, sed deserunt facere.</p>
+                    <p>{{description}}</p>
                     <div class="all_info_book">
                         <p><span class="book_desc">Genre:&nbsp;</span><span class="book_desc_value">Romantique</span>
                         </p>
-                        <p><span class="book_desc">Author:&nbsp;</span><span class="book_desc_value">Socrate</span></p>
-                        <p><span class="book_desc">Delivré le:&nbsp;</span><span class="book_desc_value">29 janvier
+                        <p><span class="book_desc">Author:&nbsp;</span><span class="book_desc_value">{{author}}</span>
+                        </p>
+                        <p><span class="book_desc">Delivré le:&nbsp;</span><span class="book_desc_value">{{edit}}
                                 1996</span></p>
-                        <p><span class="book_desc">Nombre(s):&nbsp;</span><span class="book_desc_value">50</span></p>
+                        <p><span class="book_desc">Nombre(s):&nbsp;</span><span
+                                class="book_desc_value">{{quantity}}</span></p>
 
                     </div>
                 </div>
             </div>
-
         </section>
         <footer class="modal-card-foot">
             <button class="button is-disabled" *ngIf="!connected" routerLink="/sign-up/true"><i

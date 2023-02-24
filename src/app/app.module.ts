@@ -25,6 +25,7 @@ import { ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
 import { InMemoryCache } from '@apollo/client/core';
 import { HttpLink } from 'apollo-angular/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCommonModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ReactiveFormsModule,
     HttpClientModule,
     ApolloModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCommonModule
   ],
   providers: [
     AuthService,

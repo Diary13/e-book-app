@@ -103,12 +103,12 @@ export class FormsComponent implements OnInit {
             if (res.token) {
               sessionStorage.setItem('token', res.token);
               // this.router.navigate(['/sell']);
-              this.snackbar.open("Connecté", '', {
-                duration: 3000,
-                verticalPosition: 'top',
-                horizontalPosition: 'center',
-              });
-              // location.assign('/sell');
+              // this.snackbar.open("Connected", '', {
+              //   duration: 3000,
+              //   // verticalPosition: 'top',
+              //   // horizontalPosition: 'center',
+              // });
+              location.assign('/sell');
             } else {
               console.log(res.message);
             }

@@ -18,6 +18,13 @@ export class BookService {
             id
             image
             title
+            price
+            title
+            author
+            description
+            EditionDate
+            quantity
+            genre
           }
         }`
     })
