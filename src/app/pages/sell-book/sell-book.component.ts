@@ -100,12 +100,12 @@ export class SellBookComponent implements OnInit {
   //   title: "",
   //   path: 'assets/images/books/book-6.png'
   // }];
-  url = 'http://localhost:3000'
   books = [{
     title: '',
     image: '',
     description: '',
     quantity: 0,
+    genre: '',
     author: '',
     edit: '',
     price: 0
@@ -116,11 +116,7 @@ export class SellBookComponent implements OnInit {
   ngOnInit(): void {
     this.bookService.getAllBooks().subscribe({
       next: (res: any) => {
-        console.log("RES: ", res.data.books);
         this.books = res.data.books;
-        this.books.forEach((elem) => {
-          console.log('elem: ', elem.image);
-        })
       },
       error: (err: any) => {
         console.log("ERR: ", err);

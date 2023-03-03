@@ -44,8 +44,9 @@
                 <div class="dropdown is-hoverable user is-flex">
                     <div class="dropdown-trigger">
                         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                            <img src="../../../assets/images/users/admin.png" alt="">
-                            <span>&nbsp;&nbsp;Utilisateur</span>
+                            <!-- <img src="../../../assets/images/users/admin.png" alt=""> -->
+                            <img src="{{decodeToken.image}}" alt=" F4">
+                            <span>&nbsp;&nbsp;{{decodeToken.username}}</span>
                         </button>
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu">
