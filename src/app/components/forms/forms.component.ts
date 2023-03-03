@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
+import jwtDecode from 'jwt-decode';
 import { UserType } from 'src/generated-types';
 import { AuthService } from './auth.service';
 // import { MatSnackBar } from '@angular/material/snack-bar';
@@ -102,13 +103,18 @@ export class FormsComponent implements OnInit {
             console.log(res);
             if (res.token) {
               sessionStorage.setItem('token', res.token);
+              const decodeToken: any = jwtDecode(res.token);
+              if (decodeToken.isAdmin)
+                location.assign('/admin');
+              else
+                location.assign('/user/sell');
               // this.router.navigate(['/sell']);
               // this.snackbar.open("Connected", '', {
               //   duration: 3000,
               //   // verticalPosition: 'top',
               //   // horizontalPosition: 'center',
               // });
-              location.assign('/sell');
+
             } else {
               console.log(res.message);
             }

@@ -17,8 +17,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     let token = sessionStorage.getItem('token');
     if (token) {
-      this.connected = true;
       this.decodeToken = jwtDecode(token);
+      if (!this.decodeToken.isAdmin)
+        this.connected = true;
     } else
       this.connected = false;
   }

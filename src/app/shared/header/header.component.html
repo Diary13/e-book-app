@@ -18,7 +18,7 @@
             <a class="navbar-item">
                 Services
             </a>
-            <a class="navbar-item" routerLink="/sell">
+            <a class="navbar-item" routerLink="sell">
                 Livres
             </a>
             <a class="navbar-item">
@@ -28,16 +28,16 @@
         <div class="navbar-end">
             <div class="navbar-item" *ngIf="connected == false">
                 <div class="buttons">
-                    <a class="button is-primary" routerLink="/sign-up/true">
+                    <a class="button is-primary" routerLink="sign-up/true">
                         <strong>S'inscrire</strong>
                     </a>
-                    <a class="button is-light" routerLink="/sign-up/false">
+                    <a class="button is-light" routerLink="sign-up/false">
                         Se connecter
                     </a>
                 </div>
             </div>
             <div class="navbar-item" *ngIf="connected == true">
-                <button class="button_cart" routerLink="/cart">
+                <button class="button_cart" routerLink="cart">
                     <i class="fa fa-cart-plus"></i>
                     <span class="badge is-warning">+12</span>
                 </button>
@@ -51,10 +51,10 @@
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu">
                         <div class="dropdown-content">
-                            <a href="#" class="dropdown-item">
+                            <a class="dropdown-item">
                                 <i class="fa fa-pen"></i>&nbsp;&nbsp; Edit profil
                             </a>
-                            <a href="#" class="dropdown-item" (click)="quit()">
+                            <a class="dropdown-item" (click)="quit()">
                                 <i class="fa fa-sign-out"></i>&nbsp;&nbsp; Sign out
                             </a>
                         </div>

@@ -26,6 +26,9 @@ import { InMemoryCache } from '@apollo/client/core';
 import { HttpLink } from 'apollo-angular/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCommonModule } from '@angular/material/core';
+import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
+import { UserPageComponent } from './pages/user-page/user-page.component';
+import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 
 
 @NgModule({
@@ -45,6 +48,9 @@ import { MatCommonModule } from '@angular/material/core';
     CartComponent,
     BookCartViewComponent,
     PopupConfirmComponent,
+    HomeAdminComponent,
+    UserPageComponent,
+    AdminPageComponent,
   ],
   imports: [
     BrowserModule,

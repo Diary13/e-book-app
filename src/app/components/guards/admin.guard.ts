@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class AdminGuard implements CanActivate {
   token = sessionStorage.getItem('token');
   constructor(private router: Router) { }
 
@@ -16,7 +16,7 @@ export class AuthGuard implements CanActivate {
 
     if (this.token) {
       const decodeToken: any = jwtDecode(this.token);
-      if (!decodeToken.isAdmin)
+      if (decodeToken.isAdmin)
         return true;
     }
     this.router.navigate(['/sign-up/false']);
